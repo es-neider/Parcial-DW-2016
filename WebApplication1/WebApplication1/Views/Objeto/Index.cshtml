@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplication1.Models.Objeto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <style>
+        .titulo {
+            font-family: Calibri;
+            font-size: 34px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <div class="col-md-4">
+
+                <h2>@Html.DisplayFor(modelItem => item.Nombre)</h2>
+                <p>@Html.DisplayFor(modelItem => item.Precio)</p>
+                <p>@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                <p> @Html.DisplayFor(modelItem => item.TiempoLimite)</p>
+                <img src=item.imagen border:1 width="300ex" height="200ex" />
+
+                <p><a class="btn btn-default" href="http://www.lg.com/co/televisores/lg-42CS560-lcd">¡informacion sobre el articulo! &raquo;</a></p>
+                ingrese valor de puja
+                <input type="text" id="precio" />
+                <p><a class="btn btn-default">pujar!&raquo;</a></p>
+            </div>
+        </td>
+        <td>
+         @Html.ActionLink("Descripcion", "Detalle", "Objeto", item, null)
+        </td>
+    </tr>
+}
+
+</table>

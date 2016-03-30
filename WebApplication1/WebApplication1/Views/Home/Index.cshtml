@@ -1,0 +1,117 @@
+﻿@model WebApplication1.Models.Puja
+@{
+    ViewBag.Title = "SissyCeant";
+}
+
+
+<head>
+    <style>
+        .modi {
+            background-color:ghostwhite;
+            padding: 15px;
+            border: 2px;
+            border-style:double;
+            height:480px;
+            width:380px;
+
+        }
+        body {
+            background-color:darkgray;
+        }
+        h2 {
+            text-align:center;
+        }
+        .est {
+            color:cadetblue;
+            font-family:Calibri;
+            font-size: 14px;
+         }
+        .prec {
+            font-family:Calibri;
+            font-size:19px;
+         }
+        .img-thumbnail {
+            border:4;
+            width="300ex";
+            height="200ex";
+        }
+        .editex{
+            align-items:center ;
+            
+        }
+    </style>
+    <script>
+        
+           function AgregarPrecio() {
+                var pesioi = 0;
+           }
+
+           function VerificarPrecio() {
+               var precio;
+               var sumar = 0;
+               precio = document.getElementById("precio");
+
+               if (precio.value <= 500000 && precio.value >= 100000) {
+                   window.alert("puja realizada");
+                   sumar = sumar + precio.value;
+               } else {
+
+                   if (precio.value > 500000) {
+                       window.alert("debes ingresar un valor menor que 500000 ");
+                   }
+                   else {
+                       window.alert("debes ingresar un valor mayor que 100000 ");
+
+                   }
+
+               }
+
+           }
+
+
+       </script>
+</head>
+
+<div class="jumbotron">
+    <h1>SissyCeant</h1>
+    <p class="lead">Aprenda a conseguìr sus objetos de valor, a precios muy bajos y tambien a venderlos </p>
+    <p><a href="http://localhost:55205/Account/Register" class="btn btn-primary btn-lg">Mira Aqui &raquo;</a></p>
+</div>
+
+<h1>Aqui estan las nuevas ofertas.</h1>
+<div class="container">
+<div class="row">
+    <div class="col-md-4 modi">
+        <h2>Lg LCD 42 pulgadas</h2>
+        <p class="est"> Estado: 9/10</p>
+        <p class="prec">Precio: 790.000</p>
+        <img @*class="img-thumbnail"*@ src="C:/Users/josek/Desktop/tv_lcd.jpg" height="200ex" width="300ex"/>
+        <p><a class="btn btn-default" href="http://www.lg.com/co/televisores/lg-42CS460-lcd">Ver mas informacion &raquo;</a></p>
+        Ingrese valor de puja:
+        <input type="text" id="precio" onchange="VerificarPrecio()" />
+        <p><a class="btn btn-default" href="">Pujar!&raquo;</a></p>
+        
+    </div>
+
+    <div class="col-md-4 modi">
+        <h2>Apple Tv</h2>
+        <p class="est">Estado 9/10</p>
+        <p class="prec">Precio: 410.500</p>
+        <img  class="img-thumbnail" src="C:/Users/josek/Desktop/og.jpg"/>
+        <p><a class="btn btn-default" href="http://www.apple.com/tv/">Ver mas informacion &raquo;</a></p>
+        Ingrese valor de puja:
+        <input type="text" id="precio" onchange="VerificarPrecio()" />
+        <p><a class="btn btn-default" href="">Pujar!&raquo;</a></p>
+    </div>
+    <div class="col-md-4 modi">
+        <h2>Moto G III Generacion</h2>
+        <p class="est">Estado 10/10, pasa por nuevo</p>
+        <p class="prec">Precio: 660.000</p>
+        <img class="img-thumbnail"  src="C:/Users/josek/Desktop/motog.jpg"/>
+        <p><a class="btn btn-default" href="http://www.motorola.com.co/products/moto-g?gclid=Cj0KEQjwz-i3BRDtn53Z5Z7t4PUBEiQA23q2ANzDkHlAOZ_9Ov4_hsJA1nt6D9-wJUaXK170AlqRHkMaAvUl8P8HAQ">Conoce y compara &raquo;</a></p>
+        Ingrese valor de puja:
+        <input type="text" id="precio" onchange="VerificarPrecio()" />
+        <p><a class="btn btn-default" href="">Pujar!&raquo;</a></p>
+     </div>
+</div>
+    

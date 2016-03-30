@@ -1,0 +1,95 @@
+﻿
+body{
+	margin: 0;
+	font-family: sans-serif;
+	
+}
+header {
+	width: 100%;
+	background: #4E94AB;
+	
+}
+.imagenMenu{
+    width:64px;
+    height: 64px;
+    cursor: pointer;
+}
+#btn-menu{
+    display:none;
+	top:25%;
+	position:center;
+}
+nav {
+ position: absolute;
+ height: 100%;
+ left:0;
+ top:10.8%;
+ z-index: 20;
+   
+}
+.menu{
+    
+	position: fixed;
+	background: #2E2E2E;
+    opacity: 12;
+	width: 15%;
+	margin-left: -70%;
+	transition: all 1s;
+    border-right: 2px solid #fff;
+	
+}
+.menu ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+ 
+}
+.menu li{
+
+	text-align: center;
+	flex-grow: 1;
+	margin-left: -70%;
+    border-top: 2px solid #fff;
+}
+
+.menu li  a {
+	display: block;
+	padding: 15px ;
+	color: #fff;
+	text-decoration: none;
+    float:right;
+    	
+
+}
+div .barra{
+    position:absolute;
+    background-color: #aaa;
+    height:50px;
+    width:0px;
+    opacity: .2;
+    -webkit-transition: width .2s;
+    
+
+}
+#btn-menu:checked  ~ .menu{
+	margin: 0;
+}
+input #buscador{
+	width:340px;
+	height:50px;
+	background-color: #2E2E2E;
+	outline: none;
+	border:0px;	
+	font-size: 1.2em;
+	text-align:right;
+    
+}
+li:hover div.barra{
+	width:340px;
+     cursor:pointer;
+}
+.navbar_brand {
+    text-size-adjust:25; 
+}
