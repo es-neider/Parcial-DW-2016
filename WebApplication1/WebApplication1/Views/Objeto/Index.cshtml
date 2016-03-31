@@ -11,6 +11,12 @@
             font-size: 34px;
             text-align: center;
         }
+        .cent {
+            text-align: center;
+        }
+        .texto {
+         text-align:left;
+        }
     </style>
 
 </head>
@@ -24,13 +30,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <div class="col-md-4">
-
+            <div class="col-md-4 cent">
+                <img src=item.imagen width="300ex" height="200ex" />
                 <h2>@Html.DisplayFor(modelItem => item.Nombre)</h2>
-                <p>@Html.DisplayFor(modelItem => item.Precio)</p>
-                <p>@Html.DisplayFor(modelItem => item.Descripcion)</p>
-                <p> @Html.DisplayFor(modelItem => item.TiempoLimite)</p>
-                <img src=item.imagen border:1 width="300ex" height="200ex" />
+                <p class="texto">@Html.DisplayFor(modelItem => item.Precio)</p>
+                <p class="texto">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                <p class="texto"> @Html.DisplayFor(modelItem => item.TiempoLimite)</p>
+                
 
                 <p><a class="btn btn-default" href="http://www.lg.com/co/televisores/lg-42CS560-lcd">¡informacion sobre el articulo! &raquo;</a></p>
                 ingrese valor de puja
